@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration From
+        </title>
+    </head>
+    <body>
+        <h1>             
+            Registration Form
+        </h1>
+        <form name="regForm" method="GET" action="Home.html">
+            <label for="uname">Full Name: </label>
+            <input type="text" name="uname" placeholder="Enter Name" /> <br>
+            <label for="pass">Enter Password: </label>
+            <input type="hidden" name="sessionID" value="111" />
+            <input type="password" name="pass" /> <br>
+            <label for="Gender"> Gender: </label>
+            <input type="radio" name="Gender" value="f" checked /> Female
+            <input type="radio" name="Gender" value="m"/> Male <br>
+            <label for="hobbies"> Select Hobbies: </label>
+            <input type="checkbox" name="hobbies" value="r" /> Reading
+            <input type="checkbox" name="hobbies" value="w"/> Writing
+            <input type="checkbox" name="hobbies" value="b" checked /> Class bunk <br>
+            <label for="class"> Your Class: </label>
+            <select name="class" size="2" multiple >
+                <option value="I"> IT </option>
+                <option value="C"> CS </option>
+                <option value="M"> MT </option>
+                <option value="CE"> CE </option>
+                <option value="B"> BCA </option>
+            </select> <br>
+            <label for="age"> Enter Your Age: </label>
+            <input type="range" name="age" min="1" max="150"/> Years<br>
+            <label for="dob"> Enter DOB: </label>
+            <input type="date" name="age" /><br>
+            <label for="address"> Enter Permanent Address: </label>
+            <textarea rows="2" cols="20" name="address" placeholder="Enter Address"></textarea><br>
+            <input type="Reset" />
+            <input type="submit"  value="Register"/>
+
+        </form>
+    </body>
+</html>

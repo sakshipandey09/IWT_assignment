@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    
+    <div id="text" style="color:red"; font-size:1pt ;>Text growing</div>
+    <script>
+     var fontSize=1;
+     var flag=true;
+     function growingg()
+     {
+        const textElement=document.getElementById("text");
+        if(flag){
+            fontSize++;
+            textElement.style.fontSize=fontSize + "pt";
+        
+        if(fontSize >=50)
+        {
+            flag=false;
+            textElement.innerHTML="Text-shrinking";
+            textElement.style.color="blue";
+
+        }
+    }
+    else{
+        fontSize--;
+        textElement.style.fontSize=fontSize + "pt";
+        if(fontSize<=5)
+        {
+            clearInterval(intervall);
+        }
+        }
+     }
+     intervall=setInterval(growingg,100);
+
+    </script>
+   
+
+
+</body>
+</html>

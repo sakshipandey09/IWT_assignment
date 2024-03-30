@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="digiclock"></div>
+    <script>
+        digiclock = document.getElementById("digiclock");
+        name = prompt("Enter your name");
+
+        function clock() {
+            var dt = new Date();
+            var hh = dt.getHours();
+            var mm = dt.getMinutes();
+            var ss = dt.getSeconds();
+            var time = hh + ":" + mm + ":" + ss;
+            var date = dt.toDateString(); 
+            digiclock.innerHTML = time + " " + date;
+
+            if (hh >= 0 && hh < 12) {
+                digiclock.innerHTML += " Good morning, " + name + "!";
+            }
+        }
+
+        setInterval(clock, 1000);
+    </script>
+</body>
+</html>
